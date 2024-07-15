@@ -45,8 +45,8 @@ function About() {
           ></img>
         </div>
       </div>
-      <div className="bg-woman-image bg-cover w-screen h-screen">
-        <div className="pl-16 pt-40 text-7xl leading-relaxed font-handlee">
+      <div className="bg-woman-image bg-cover h-screen">
+        <div className="ml-16 pt-40 text-7xl leading-relaxed font-handlee">
           <p className="">Purely Plant-Based Nourishment</p>
           <div className="flex">
             For Your Body and Soul
