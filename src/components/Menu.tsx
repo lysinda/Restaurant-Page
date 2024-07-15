@@ -1,3 +1,15 @@
+type MenuItemType = {
+  name: string;
+  description: string;
+  price: number;
+};
+
+type MenuSectionType = {
+  name: string;
+  description: string;
+  data: MenuItemType[];
+};
+
 const menuData = [
   {
     name: "Starters",
@@ -122,7 +134,7 @@ function Menu() {
   return (
     <div className="flex">
       <div className="w-1/5 bg-leaves-repetitive-image bg-contain scale-x-[-1]"></div>
-      <div className="flex flex-col justify-center items-center overflow-scroll w-3/5 pt-16 px-16">
+      <div className="flex flex-col justify-center items-center w-3/5 pt-16 px-16">
         <h1 className="text-7xl font-handlee pb-4">Menu</h1>
         {menuData.map((section) => (
           <MenuSection
@@ -131,14 +143,14 @@ function Menu() {
             data={section.data}
           />
         ))}
-        <img src="divider.svg" className="w-2/5 my-16"></img>
+        <img src="images/divider.svg" className="w-2/5 my-16"></img>
       </div>
       <div className="w-1/5 bg-leaves-repetitive-image bg-contain"></div>
     </div>
   );
 }
 
-function MenuSection(props) {
+function MenuSection(props: MenuSectionType) {
   return (
     <div className="text-xl w-full">
       <h2 className="text-5xl font-raleway pt-8 pb-4">{props.name}</h2>
@@ -156,7 +168,7 @@ function MenuSection(props) {
   );
 }
 
-function MenuItem(props) {
+function MenuItem(props: MenuItemType) {
   return (
     <div className="py-4">
       <h3 className="text-2xl font-raleway font-semibold pb-1 text-celadon">

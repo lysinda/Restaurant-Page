@@ -5,14 +5,14 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [page, setPage] = useState("home");
 
   return (
     <div className="app bg-leaves-bg-image text-lavender-blush">
-      <Header page={page} setPage={setPage} />
+      <Header setPage={setPage} />
       <div className="content">
         {page === "home" && <Home />}
         {page === "menu" && <Menu />}

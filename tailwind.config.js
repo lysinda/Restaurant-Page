@@ -24,12 +24,12 @@ export default {
         raleway: ["Raleway", "sans-serif"],
       },
       backgroundImage: {
-        "woman-image": "url('woman.jpg')",
-        "leaves-repetitive-image": "url('leaves_repetitive.png')",
-        "leaves-bg-image": "url('leaves_bg.png')",
-        "ivy-image": "url('ivy.png')",
-        "leaves-frame-image": "url('leaves_frame.png')",
-        "leaves-cake-image": "url('leaves_cake.png')",
+        "woman-image": "url('/images/woman.jpg')",
+        "leaves-repetitive-image": "url('/images/leaves_repetitive.png')",
+        "leaves-bg-image": "url('/images/leaves_bg.png')",
+        "ivy-image": "url('/images/ivy.png')",
+        "leaves-frame-image": "url('/images/leaves_frame.png')",
+        "leaves-cake-image": "url('/images/leaves_cake.png')",
       },
       gridTemplateColumns: {
         "55/fr": "55% 1fr",

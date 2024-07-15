@@ -1,11 +1,19 @@
-import { useState } from "react";
+type HeaderProps = {
+  setPage: (page: string) => void;
+};
 
-function Header(props) {
+type NavItemProps = {
+  target: string;
+  name: string;
+  setPage: (page: string) => void;
+};
+
+function Header(props: HeaderProps) {
   return (
     <div>
       <div className="header flex justify-between items-center bg-night-green">
         <div className="logo flex items-center">
-          <img src="llama.png" className="w-32 p-2 pb-0"></img>
+          <img src="images/llama.png" className="w-32 p-2 pb-0"></img>
           <h1
             className="text-5xl font-playwrite ml-8 cursor-pointer"
             onClick={() => props.setPage("home")}
@@ -26,7 +34,7 @@ function Header(props) {
   );
 }
 
-function NavItem(props) {
+function NavItem(props: NavItemProps) {
   return (
     <li
       className="m-4 cursor-pointer"

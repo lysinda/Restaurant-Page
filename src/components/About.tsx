@@ -1,9 +1,18 @@
+import { ReactNode } from "react";
+
+type ParagraphProps = {
+  children: ReactNode;
+};
+
 function About() {
   return (
     <div>
       <div className="flex justify-between">
         <div className="w-1/3">
-          <img src="outdoors_day.jpg" className="object-cover h-full"></img>
+          <img
+            src="images/outdoors_day.jpg"
+            className="object-cover h-full"
+          ></img>
         </div>
         <div className="flex flex-col items-center text-center w-3/5 text-2xl px-36 pb-16 leading-relaxed">
           <h2 className="text-7xl font-handlee py-12">About Us</h2>
@@ -30,7 +39,10 @@ function About() {
           </Paragraph>
         </div>
         <div className="w-1/3">
-          <img src="outdoors_night.jpg" className="h-full object-cover"></img>
+          <img
+            src="images/outdoors_night.jpg"
+            className="h-full object-cover"
+          ></img>
         </div>
       </div>
       <div className="bg-woman-image bg-cover w-screen h-screen">
@@ -38,7 +50,7 @@ function About() {
           <p className="">Purely Plant-Based Nourishment</p>
           <div className="flex">
             For Your Body and Soul
-            <img src="heart.svg" className="w-1/12 pl-4 -mt-6"></img>
+            <img src="images/heart.svg" className="w-1/12 pl-4 -mt-6"></img>
           </div>
         </div>
       </div>
@@ -46,12 +58,12 @@ function About() {
   );
 }
 
-function Paragraph(props) {
+function Paragraph(props: ParagraphProps) {
   return <p className="">{props.children}</p>;
 }
 
 function Divider() {
-  return <img src="divider.svg" className="w-1/3 p-8"></img>;
+  return <img src="images/divider.svg" className="w-1/3 p-8"></img>;
 }
 
 export default About;

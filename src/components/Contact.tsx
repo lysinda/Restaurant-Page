@@ -1,3 +1,7 @@
+type HeadingProps = {
+  text: string;
+};
+
 function Contact() {
   return (
     <div className="flex justify-center bg-leaves-frame-image bg-center bg-no-repeat bg-contain h-screen my-8">
@@ -34,7 +38,7 @@ function Contact() {
   );
 }
 
-function Heading(props) {
+function Heading(props: HeadingProps) {
   return (
     <div>
       <h3 className="text-2xl">{props.text}</h3>
